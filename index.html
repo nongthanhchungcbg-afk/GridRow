@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thử nghiệm CSS grid-row để định vị và kéo dài một Grid Item qua hai hàng.">
+    <title>Grid Row — CSS Grid Lab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="topbar">
+        <a class="brand" href="#top"><span>G</span> CSS GRID LAB</a>
+        <p>Bài thực hành <strong>04 / 04</strong></p>
+    </header>
+
+    <main id="top">
+        <section class="intro">
+            <p class="eyebrow">GRID PROPERTIES / 04</p>
+            <h1>Kéo dài qua hàng.<br><em>Thay đổi bố cục.</em></h1>
+            <p class="intro-copy">Dùng <code>grid-row</code> để xác định vị trí bắt đầu, kết thúc hoặc số hàng mà một Grid Item chiếm.</p>
+        </section>
+
+        <section class="workspace">
+            <div class="workspace-heading">
+                <div>
+                    <span class="example-index">LIVE DEMO</span>
+                    <h2>Thử một cách sắp xếp</h2>
+                </div>
+                <span class="result">3 cột <span>·</span> 3 hàng</span>
+            </div>
+
+            <div class="controls" role="group" aria-label="Chọn cách kéo dài hàng cho Ô 1">
+                <button class="choice is-selected" type="button" data-mode="start" aria-pressed="true"><code>1 / 3</code><span>Hàng 1 đến 3</span></button>
+                <button class="choice" type="button" data-mode="move" aria-pressed="false"><code>2 / 4</code><span>Hàng 2 đến 4</span></button>
+                <button class="choice" type="button" data-mode="span" aria-pressed="false"><code>span 2</code><span>Trải qua hai hàng</span></button>
+            </div>
+
+            <div class="grid-stage">
+                <div class="grid-container mode-start" id="grid-demo" aria-label="Grid gồm ba cột và ba hàng">
+                    <div class="item item1">Ô 1 <span>span 2</span></div>
+                    <div class="item">Ô 2</div>
+                    <div class="item">Ô 3</div>
+                    <div class="item">Ô 4</div>
+                    <div class="item">Ô 5</div>
+                    <div class="item">Ô 6</div>
+                    <div class="item">Ô 7</div>
+                    <div class="item">Ô 8</div>
+                </div>
+            </div>
+
+            <div class="code-row">
+                <code id="code-output">grid-row: 1 / 3;</code>
+                <span id="code-description">Ô 1 bắt đầu ở hàng 1 và kết thúc tại đường kẻ 3 — chiếm hai hàng.</span>
+            </div>
+        </section>
+
+        <section class="explanation">
+            <span aria-hidden="true">↳</span>
+            <p><strong>Một Grid, nhiều cách thử.</strong> Chọn từng giá trị phía trên để quan sát vị trí của Ô 1 thay đổi theo đường kẻ hàng.</p>
+        </section>
+    </main>
+
+    <footer><span>CSS GRID LAB</span><span>04 — 04</span></footer>
+    <script src="script.js"></script>
+</body>
+</html>
